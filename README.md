@@ -19,5 +19,5 @@ anteriormente y un método para mostrar la información del empleado. Luego, cre
 objetos de esta clase, cada uno representando un empleado diferente, y solicitaremos al usuario
 que ingrese los detalles de cada empleado a través del teclado.
 
-<img width="1470" height="405" alt="image" src="https://github.com/user-attachments/assets/a3cdabb0-8208-4df3-add2-218a3e45bbc7" />
+<img width="1471" height="788" alt="image" src="https://github.com/user-attachments/assets/c8f81349-b88b-464d-aefa-7fe9c5ce5ae5" />
 
