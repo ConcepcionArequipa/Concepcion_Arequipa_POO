@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/ClaseSiete" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/RepasoUno" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Correccion_Prueba_Uno" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Herencia" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
