@@ -41,18 +41,77 @@ Implementar un menú con las siguientes opciones:
 
 - Opción 7: Finaliza el programa.
 
-**Capturas del Código**
+**Capturas del codigo:**
+
+![img_18.png](img_18.png)
+
+![img_19.png](img_19.png)
+
+![img_20.png](img_20.png)
+
+![img_21.png](img_21.png)
+
+![img_22.png](img_22.png)
+
+![img_23.png](img_23.png)
+
+![img_24.png](img_24.png)
 
 
+**Capturas del Resultado**
 
+Opcion 1: Ingresar precio
 
+![img_11.png](img_11.png)
 
+Opcion 2: Mostrar todos los precios
 
+![img_12.png](img_12.png)
+
+Opcion 3: Mostrar el precio mas alto
+
+![img_13.png](img_13.png)
+
+Opcion 4: Mostrar el precio mas bajo
+
+![img_14.png](img_14.png)
+
+Opcion 5: Mostrar precios iguales
+
+![img_15.png](img_15.png)
+
+Opcion 6: Buscar precio
+
+![img_16.png](img_16.png)
+
+Opcion 7: Salir
+
+![img_17.png](img_17.png)
 
 
 Ejercicio 2: Sistema de registro de Olimpiadas
 
-**Enunciado del Trabajo:**
+**Detalle del trabajo:**
+
+En este ejercicio se desarrolló un sistema en Java para gestionar una Olimpiada, aplicando los conceptos principales de Programación Orientada a Objetos.
+
+✔ Implementación realizada
+
+- Clase abstracta Participante: contiene atributos base y un método abstracto mostrarTipo().
+
+- Clases hijas Atleta y Equipo: heredan de Participante y sobrescriben el método abstracto para aplicar polimorfismo.
+
+- Clase Evento: permite registrar participantes utilizando un ArrayList.
+
+- Clase Olimpiada: almacena la información general y la lista de eventos registrados.
+
+- Excepciones personalizadas: usadas para validar datos incorrectos (edad, número de integrantes, dorsal, cadenas vacías).
+
+- Uso de ArrayList: para manejar listas dinámicas en participantes y eventos.
+
+- Menú principal: permite registrar la olimpiada, crear eventos, agregar participantes y consultar información.
+
+**Enunciado del trabajo:**
 
 Desarrollar un sistema básico orientado a objetos para gestionar Olimpiadas, Eventos deportivos y Deportistas, aplicando:
 Clases e instancias , Herencia , Composición , Uso de ArrayList , Manejo de excepciones (según requerimientos del trabajo) ,Representación UML.
