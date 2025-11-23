@@ -1,6 +1,6 @@
 Nombre: Concepcion Arequipa
 
-**Ejercicio 1: SISTEMA DE REGISTRO DE JUEGOS**
+****Ejercicio 1: SISTEMA DE REGISTRO DE JUEGOS****
 
 **_Explicacion del trabajo:_**
 
@@ -103,16 +103,26 @@ Clase: MainJuegos
 
 _Capturas de la ejecucion del programa:_
 
+![img_35.png](img_35.png)
 
+![img_36.png](img_36.png)
+
+![img_37.png](img_37.png)
+
+![img_38.png](img_38.png)
+
+![img_39.png](img_39.png)
+
+![img_40.png](img_40.png)
 
 
 **Ejercicio 2:** 
 
-Explicacion del trabajo:
+_Explicacion del trabajo:_
 
 El sistema se fundamenta en la Programación Orientada a Objetos (POO). Se implementa el Encapsulamiento declarando atributos como private en la clase base Dispositivo, controlando su modificación únicamente a través de setters. Esta técnica es vital, ya que los setters y el constructor aplican validaciones con la excepción personalizada DatoInvalidoException, asegurando que el estado del objeto (ej., precio positivo) sea siempre válido desde su creación. La Herencia se establece al extender las clases Laptop y Telefono de Dispositivo, permitiendo la reutilización de código y la adición de atributos especializados. Finalmente, se aplica el Polimorfismo al sobrescribir el método mostrarInfo() en cada clase hija. Este enfoque permite que el ArrayList, aunque declarado para almacenar el tipo genérico Dispositivo, ejecute la versión específica del método (Laptop o Telefono) durante la iteración en tiempo de ejecución, demostrando un acoplamiento flexible y eficiente.
 
-Capturas del codigo:
+_Capturas del codigo:_
 
 Clase Padre: Dispositivo
 
@@ -157,7 +167,7 @@ Main:
 
 ![img_14.png](img_14.png)
 
-Capturas de la ejecucion del programa:
+_Capturas de la ejecucion del programa:_
 
 ![img_16.png](img_16.png)
 
