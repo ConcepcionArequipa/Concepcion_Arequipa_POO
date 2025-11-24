@@ -1,6 +1,4 @@
-package EjercicioUno;
-
-import PrimerEjercicio.DatoInvalidoException;
+package PrimerEjercicio;
 
 public abstract class Juego {
     protected String nombre;
@@ -9,7 +7,7 @@ public abstract class Juego {
 
     //Metodo constructor
 
-    public Juego(String nombre, double precio, int anioLanzamiento) throws DatoInvalidoException {
+    public Juego(String nombre, double precio, int anioLanzamiento) throws DatoInvalidoException{
 
         this.nombre = nombre;
         this.precio = precio;

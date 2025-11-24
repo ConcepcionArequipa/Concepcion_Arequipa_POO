@@ -1,16 +1,13 @@
-package EjercicioDos;
+package EjercicioTres;
 
-import EjercicioTres.DatosInvalidosException;
-import EjercicioTres.Participante;
-
-public class Atleta extends Participante {
+public class Atleta extends Participante{
 
     private int numeroDorsal;
     private String categoria; // Opcional, por ejemplo: "100m planos"
     public Atleta(String nombre, int edad, String deporte, String pais,int numeroDorsal, String categoria) {
         super(nombre, edad, deporte, pais);
         if (numeroDorsal <= 0) {
-            throw new EjercicioTres.DatosInvalidosException("El numero de dorsal debe ser mayor que cero.");
+            throw new DatosInvalidosException("El numero de dorsal debe ser mayor que cero.");
         }
         this.numeroDorsal = numeroDorsal;
 

@@ -1,9 +1,6 @@
-package EjercicioDos;
+package EjercicioTres;
 
-import EjercicioTres.DatosInvalidosException;
-import EjercicioTres.Participante;
-
-public class Equipo extends Participante {
+public class Equipo extends Participante{
     private int numeroIntegrantes;
     public Equipo(String nombre, int edad, String deporte, String pais, int numeroIntegrantes) {
         super(nombre, edad, deporte, pais);

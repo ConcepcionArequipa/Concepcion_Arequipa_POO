@@ -1,15 +1,9 @@
-package EjercicioDos;
-import EjercicioTres.Atleta;
-import EjercicioTres.DatosInvalidosException;
-import EjercicioTres.Equipo;
-import EjercicioTres.Evento;
-import EjercicioTres.Olimpiada;
-
+package EjercicioTres;
 import java.util.Scanner;
-public class Main {
+public class MainOlimpiada {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        EjercicioTres.Olimpiada olimpiada = new Olimpiada("Olimpiadas Internacionales", 2025);
+        Olimpiada olimpiada = new Olimpiada("Olimpiadas Internacionales", 2025);
 
         int opcion = -1;
 
@@ -32,7 +26,7 @@ public class Main {
                     case 1: {
                         System.out.print("Ingrese el nombre del evento: ");
                         String nombreEvento = sc.nextLine();
-                        EjercicioTres.Evento e = new EjercicioTres.Evento(nombreEvento);
+                        Evento e = new Evento(nombreEvento);
                         olimpiada.agregarEvento(e);
                         System.out.println("Evento creado exitosamente.");
                         break;
@@ -41,7 +35,7 @@ public class Main {
                     case 2: {
                         System.out.print("Nombre del evento donde registrar: ");
                         String nombreEvento = sc.nextLine();
-                        EjercicioTres.Evento e = olimpiada.buscarEvento(nombreEvento);
+                        Evento e = olimpiada.buscarEvento(nombreEvento);
 
                         if (e == null) {
                             System.out.println("Evento no encontrado.");
@@ -63,7 +57,7 @@ public class Main {
                         System.out.print("Categoría: ");
                         String categoria = sc.nextLine();
 
-                        EjercicioTres.Atleta a = new Atleta(nombre, edad, deporte, pais, dorsal, categoria);
+                        Atleta a = new Atleta(nombre, edad, deporte, pais, dorsal, categoria);
                         e.agregarParticipante(a);
 
                         System.out.println("Atleta registrado correctamente.");
@@ -73,7 +67,7 @@ public class Main {
                     case 3: {
                         System.out.print("Nombre del evento donde registrar: ");
                         String nombreEvento = sc.nextLine();
-                        EjercicioTres.Evento e = olimpiada.buscarEvento(nombreEvento);
+                        Evento e = olimpiada.buscarEvento(nombreEvento);
 
                         if (e == null) {
                             System.out.println("Evento no encontrado.");
@@ -92,7 +86,7 @@ public class Main {
                         System.out.print("Número de integrantes: ");
                         int integrantes = sc.nextInt();
 
-                        EjercicioTres.Equipo eq = new Equipo(nombre, edad, deporte, pais, integrantes);
+                        Equipo eq = new Equipo(nombre, edad, deporte, pais, integrantes);
                         e.agregarParticipante(eq);
 
                         System.out.println("Equipo registrado correctamente.");

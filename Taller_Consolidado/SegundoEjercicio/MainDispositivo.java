@@ -1,9 +1,4 @@
-package EjercicioDos;
-
-import SegundoEjercicio.DatoInvalidoException;
-import SegundoEjercicio.Dispositivo;
-import SegundoEjercicio.Laptop;
-import SegundoEjercicio.Telefono;
+package SegundoEjercicio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +8,7 @@ public class MainDispositivo{
 
     public static void main(String[] args) {
         // Lista para almacenar los dispositivos (Polimorfismo)
-        List<SegundoEjercicio.Dispositivo> inventario = new ArrayList<>();
+        List<Dispositivo> inventario = new ArrayList<>();
         // Objeto Scanner para la entrada de datos
         Scanner scanner = new Scanner(System.in);
 
@@ -60,7 +55,7 @@ public class MainDispositivo{
 
     // MÉTODOS AUXILIARES PARA EL REGISTRO
 
-    private static void registrarLaptop(List<SegundoEjercicio.Dispositivo> inventario, Scanner scanner) {
+    private static void registrarLaptop(List<Dispositivo> inventario, Scanner scanner) {
         System.out.println("\n---  REGISTRO DE NUEVA LAPTOP ---");
         // El try-catch envuelve toda la lógica de entrada y creación para manejar
         // tanto DatoInvalidoException como NumberFormatException
@@ -85,12 +80,12 @@ public class MainDispositivo{
             int tamanio = Integer.parseInt(scanner.nextLine());
 
             // La creación del objeto lanza DatoInvalidoException si marca o precio son inválidos
-            SegundoEjercicio.Laptop nuevaLaptop = new Laptop(marca, modelo, precio, ramGB, procesador, tamanio);
+            Laptop nuevaLaptop = new Laptop(marca, modelo, precio, ramGB, procesador, tamanio);
             inventario.add(nuevaLaptop);
 
             System.out.println("\nLaptop registrada con éxito: " + marca + " " + modelo);
 
-        } catch (SegundoEjercicio.DatoInvalidoException e) {
+        } catch (DatoInvalidoException e) {
             // Captura de nuestra excepción personalizada
             System.out.println("\nError de registro: " + e.getMessage());
         } catch (NumberFormatException e) {
@@ -99,7 +94,7 @@ public class MainDispositivo{
         }
     }
 
-    private static void registrarTelefono(List<SegundoEjercicio.Dispositivo> inventario, Scanner scanner) {
+    private static void registrarTelefono(List<Dispositivo> inventario, Scanner scanner) {
         System.out.println("\n--- REGISTRO DE UN NUEVO TELEFONO ---");
 
         try {
@@ -119,7 +114,7 @@ public class MainDispositivo{
             double almacenamiento = Double.parseDouble(scanner.nextLine());
 
             // La creación del objeto lanza DatoInvalidoException
-            SegundoEjercicio.Telefono nuevoTelefono = new Telefono(marca, modelo, precio, sistemaOperativo, almacenamiento);
+            Telefono nuevoTelefono = new Telefono(marca, modelo, precio, sistemaOperativo, almacenamiento);
             inventario.add(nuevoTelefono);
 
             System.out.println("\nTeléfono registrado con éxito: " + marca + " " + modelo);
@@ -133,7 +128,7 @@ public class MainDispositivo{
         }
     }
 
-    private static void mostrarInventario(List<SegundoEjercicio.Dispositivo> inventario) {
+    private static void mostrarInventario(List<Dispositivo> inventario) {
         if (inventario.isEmpty()) {
             System.out.println("No hay dispositivos registrados ");
             return;

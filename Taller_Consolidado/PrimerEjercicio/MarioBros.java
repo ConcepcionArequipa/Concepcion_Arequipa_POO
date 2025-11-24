@@ -1,14 +1,11 @@
-package EjercicioUno;
+package PrimerEjercicio;
 
-import PrimerEjercicio.DatoInvalidoException;
-import PrimerEjercicio.Juego;
-
-public class MarioBros extends Juego {
+public class MarioBros extends Juego{
     private String personajePrincipal;
     private int numeroMundos;
     private int numeroNiveles;
 
-    public MarioBros(String nombre, double precio, int anioLanzamiento, String personajePrincipal,int numeroMundos, int numeroNiveles) throws DatoInvalidoException {
+    public MarioBros(String nombre, double precio, int anioLanzamiento, String personajePrincipal,int numeroMundos, int numeroNiveles) throws DatoInvalidoException{
         super(nombre, precio, anioLanzamiento);
         this.personajePrincipal = personajePrincipal;
         this.numeroMundos = numeroMundos;

@@ -1,15 +1,12 @@
-package EjercicioUno;
+package PrimerEjercicio;
 
-import PrimerEjercicio.DatoInvalidoException;
-import PrimerEjercicio.Juego;
-
-public class CarreraVehiculos extends Juego {
+public class CarreraVehiculos extends Juego{
     private String tipoVehiculo;
     private String colorVehiculo;
     private int cantidadCircuitos;
     private int numeroVueltas;
 
-    public CarreraVehiculos(String nombre, double precio, int anioLanzamiento, String tipoVehiculo,String colorVehiculo, int cantidadCircuitos, int numeroVueltas) throws DatoInvalidoException {
+    public CarreraVehiculos(String nombre, double precio, int anioLanzamiento, String tipoVehiculo,String colorVehiculo, int cantidadCircuitos, int numeroVueltas) throws DatoInvalidoException{
         super(nombre, precio, anioLanzamiento);
 
         this.tipoVehiculo = tipoVehiculo;

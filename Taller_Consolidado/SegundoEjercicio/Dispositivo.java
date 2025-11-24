@@ -1,6 +1,4 @@
-package EjercicioDos;
-
-import SegundoEjercicio.DatoInvalidoException;
+package SegundoEjercicio;
 
 public class Dispositivo {
     //Atributos privados
@@ -8,7 +6,7 @@ public class Dispositivo {
     private String modelo;
     private double precio;
 
-    public Dispositivo(String marca, String modelo, double precio)  throws SegundoEjercicio.DatoInvalidoException {
+    public Dispositivo(String marca, String modelo, double precio)  throws DatoInvalidoException{
         setMarca(marca);
         setModelo(modelo);
         setPrecio(precio);
@@ -28,9 +26,9 @@ public class Dispositivo {
         return precio;
     }
 
-    public void setMarca(String marca) throws SegundoEjercicio.DatoInvalidoException {
+    public void setMarca(String marca) throws DatoInvalidoException{
         if (marca == null || marca.trim().isEmpty()){
-            throw new SegundoEjercicio.DatoInvalidoException("La marca no puede estar vacia");
+            throw new DatoInvalidoException("La marca no puede estar vacia");
         }
         else {
             this.marca = marca;
@@ -38,14 +36,14 @@ public class Dispositivo {
 
     }
 
-    public void setModelo(String modelo) throws SegundoEjercicio.DatoInvalidoException {
+    public void setModelo(String modelo) throws DatoInvalidoException{
         if (modelo == null || modelo.trim().isEmpty()) {
-            throw new SegundoEjercicio.DatoInvalidoException("El modelo no puede estar vacio");
+            throw new DatoInvalidoException("El modelo no puede estar vacio");
         }
         this.modelo = modelo;
     }
 
-    public void setPrecio(double precio) throws SegundoEjercicio.DatoInvalidoException {
+    public void setPrecio(double precio) throws DatoInvalidoException{
         if (precio <= 0) {
             throw new DatoInvalidoException("El precio no puede ser menor que 0");
         }

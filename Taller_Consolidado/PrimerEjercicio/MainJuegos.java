@@ -1,19 +1,14 @@
-package EjercicioUno;
-import PrimerEjercicio.CarreraVehiculos;
-import PrimerEjercicio.DatoInvalidoException;
-import PrimerEjercicio.Juego;
-import PrimerEjercicio.MarioBros;
-
+package PrimerEjercicio;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class MainJuegos {
     //Crear el array list
-    private static ArrayList<PrimerEjercicio.Juego> juegos=new ArrayList<>();
+    private static ArrayList<Juego> juegos=new ArrayList<>();
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         //Crear una instancia de MainJuegos porque los métodos no son estáticos.
-        PrimerEjercicio.MainJuegos sistema=new PrimerEjercicio.MainJuegos();
+        MainJuegos sistema=new MainJuegos();
         int opcion=0;
 
         do {
@@ -91,9 +86,9 @@ public class MainJuegos {
             validarNumeroNiveles(numeroNiveles);
             //Agregar los atributos a la lista pero especificamente a la clase MarioBros
 
-            juegos.add(new PrimerEjercicio.MarioBros(nombre1,precio1,anio1,personajePrincipal,numeroMundos,numeroNiveles));
+            juegos.add(new MarioBros(nombre1,precio1,anio1,personajePrincipal,numeroMundos,numeroNiveles));
         }
-        catch (PrimerEjercicio.DatoInvalidoException e) {
+        catch (DatoInvalidoException e) {
             System.out.println("Error: " + e.getMessage());}
         catch (Exception e) {
             System.out.println("Entrada inválida. Debe ingresar valores correctos.");
@@ -137,9 +132,9 @@ public class MainJuegos {
             validarVueltas(numeroVueltas);
 
 
-            juegos.add(new PrimerEjercicio.CarreraVehiculos(nombre2,precio2,anio2,tipoVehiculo,colorVehiculo,numeroCircuitos,numeroVueltas));
+            juegos.add(new CarreraVehiculos(nombre2,precio2,anio2,tipoVehiculo,colorVehiculo,numeroCircuitos,numeroVueltas));
         }
-        catch (PrimerEjercicio.DatoInvalidoException e) {
+        catch (DatoInvalidoException e) {
         System.out.println("Error: " + e.getMessage());}
         catch (Exception e) {
         System.out.println("Entrada inválida. Debe ingresar valores correctos.");
@@ -152,7 +147,7 @@ public class MainJuegos {
             System.out.println("No hay juegos registrados");
             return;
         }
-        for (PrimerEjercicio.Juego juego : juegos){
+        for (Juego juego : juegos){
             juego.mostrarDetallesJuego();
         }
     }
@@ -164,7 +159,7 @@ public class MainJuegos {
         String nombreBuscado=sc.nextLine();
 
         boolean encontrado=false;
-        for (PrimerEjercicio.Juego juego : juegos){
+        for (Juego juego : juegos){
             if (juego.getNombre().equalsIgnoreCase(nombreBuscado)){
                 juego.mostrarDetallesJuego(); //Polimorfismo
                 encontrado=true; //Si se encontro
@@ -199,44 +194,44 @@ public class MainJuegos {
     }
 
     //Metodos de validacion
-    public static void validarTexto(String texto,String mensajeError) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarTexto(String texto,String mensajeError) throws DatoInvalidoException {
         if (texto == null || texto.trim().isEmpty()) {
-            throw new PrimerEjercicio.DatoInvalidoException(mensajeError);
+            throw new DatoInvalidoException(mensajeError);
         }
     }
 
-    public static void validarPrecio(double precio) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarPrecio(double precio) throws DatoInvalidoException {
         if (precio<=0){
-            throw new PrimerEjercicio.DatoInvalidoException("El precio no puede ser negativo o cero");
+            throw new DatoInvalidoException("El precio no puede ser negativo o cero");
         }
 
     }
 
-    public static void validarAnioLanzamiento(int anioLanzamiento) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarAnioLanzamiento(int anioLanzamiento) throws DatoInvalidoException {
         if (anioLanzamiento < 1950 || anioLanzamiento> 2025) {
-            throw new PrimerEjercicio.DatoInvalidoException("El año de lanzamiento es inválido.");
+            throw new DatoInvalidoException("El año de lanzamiento es inválido.");
         }
     }
 
-    public static void validarNumeroMundos(int numeroMundos) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarNumeroMundos(int numeroMundos) throws DatoInvalidoException {
         if (numeroMundos<0 || numeroMundos > 8){
-            throw new PrimerEjercicio.DatoInvalidoException("El número de mundos debe estar entre 0 y 8 ");
+            throw new DatoInvalidoException("El número de mundos debe estar entre 0 y 8 ");
         }
     }
 
-    public static void validarNumeroNiveles(int numeroNiveles) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarNumeroNiveles(int numeroNiveles) throws DatoInvalidoException {
         if (numeroNiveles<0 || numeroNiveles> 32){
-            throw new PrimerEjercicio.DatoInvalidoException("El numero de niveles debe estr entre 0 y 32 ");
+            throw new DatoInvalidoException("El numero de niveles debe estr entre 0 y 32 ");
         }
     }
 
-    public static void validarCircuitos(int cantidadCircuitos) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarCircuitos(int cantidadCircuitos) throws DatoInvalidoException {
         if (cantidadCircuitos<0 || cantidadCircuitos > 20){
-            throw new PrimerEjercicio.DatoInvalidoException("El cantidad de circuitos debe estar entre 0 y 20");
+            throw new DatoInvalidoException("El cantidad de circuitos debe estar entre 0 y 20");
         }
     }
 
-    public static void validarVueltas(int numeroVueltas) throws PrimerEjercicio.DatoInvalidoException {
+    public static void validarVueltas(int numeroVueltas) throws DatoInvalidoException {
         if (numeroVueltas<0 || numeroVueltas > 10){
             throw new DatoInvalidoException("El numero de vueltas debe estar entre 0 y 10");
         }

@@ -1,13 +1,10 @@
-package EjercicioDos;
+package SegundoEjercicio;
 
-import SegundoEjercicio.DatoInvalidoException;
-import SegundoEjercicio.Dispositivo;
-
-public class Laptop extends Dispositivo {
+public class Laptop extends Dispositivo{
     private int ram;
     private String procesador;
     private int tamanio;
-    public Laptop(String marca, String modelo, double precio, int ram, String procesador, int tamanio) throws SegundoEjercicio.DatoInvalidoException {
+    public Laptop(String marca, String modelo, double precio, int ram, String procesador, int tamanio) throws DatoInvalidoException{
         super(marca, modelo, precio);
         setRam(ram);
         setProcesador(procesador);
@@ -18,9 +15,9 @@ public class Laptop extends Dispositivo {
         return ram;
     }
 
-    public void setRam(int ram) throws SegundoEjercicio.DatoInvalidoException {
+    public void setRam(int ram) throws DatoInvalidoException{
         if(ram<=0){
-            throw new SegundoEjercicio.DatoInvalidoException("El tamaño de la RAM no puede ser menor que cero");
+            throw new DatoInvalidoException("El tamaño de la RAM no puede ser menor que cero");
         }
         this.ram = ram;
     }
@@ -29,9 +26,9 @@ public class Laptop extends Dispositivo {
         return procesador;
     }
 
-    public void setProcesador(String procesador) throws SegundoEjercicio.DatoInvalidoException {
+    public void setProcesador(String procesador) throws DatoInvalidoException{
         if (procesador == null || procesador.trim().isEmpty()) {
-            throw new SegundoEjercicio.DatoInvalidoException("El procesador no puede estar vacio");
+            throw new DatoInvalidoException("El procesador no puede estar vacio");
         }
         this.procesador = procesador;
     }
@@ -40,7 +37,7 @@ public class Laptop extends Dispositivo {
         return tamanio;
     }
 
-    public void setTamanio(int tamanio) throws SegundoEjercicio.DatoInvalidoException {
+    public void setTamanio(int tamanio) throws DatoInvalidoException{
 
         if (tamanio <= 0) {
             throw new DatoInvalidoException("El tamaño no puede ser menor que 0");

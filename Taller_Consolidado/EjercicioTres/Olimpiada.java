@@ -1,11 +1,9 @@
-package EjercicioDos;
-import EjercicioTres.Evento;
-
+package EjercicioTres;
 import java.util.ArrayList;
 public class Olimpiada {
     private String nombre;
     private int año;
-    private ArrayList<EjercicioTres.Evento> eventos;
+    private ArrayList<Evento> eventos;
 
     public Olimpiada(String nombre, int año) {
         this.nombre = nombre;
@@ -13,12 +11,12 @@ public class Olimpiada {
         this.eventos = new ArrayList<>();
     }
 
-    public void agregarEvento(EjercicioTres.Evento e) {
+    public void agregarEvento(Evento e) {
         eventos.add(e);
     }
 
-    public EjercicioTres.Evento buscarEvento(String nombre) {
-        for (EjercicioTres.Evento e : eventos) {
+    public Evento buscarEvento(String nombre) {
+        for (Evento e : eventos) {
             if (e.toString().equalsIgnoreCase(nombre)) {
                 return e;
             }

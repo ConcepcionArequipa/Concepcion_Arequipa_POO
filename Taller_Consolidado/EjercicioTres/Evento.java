@@ -1,11 +1,8 @@
-package EjercicioDos;
-import EjercicioTres.DatosInvalidosException;
-import EjercicioTres.Participante;
-
+package EjercicioTres;
 import java.util.ArrayList;
 public class Evento {
     private String nombreEvento;
-    private ArrayList<EjercicioTres.Participante> listaParticipantes;
+    private ArrayList<Participante> listaParticipantes;
 
     public Evento(String nombreEvento) {
         if (nombreEvento == null || nombreEvento.isEmpty())
@@ -15,7 +12,7 @@ public class Evento {
         this.listaParticipantes = new ArrayList<>();
     }
 
-    public void agregarParticipante(EjercicioTres.Participante p) {
+    public void agregarParticipante(Participante p) {
         listaParticipantes.add(p);
     }
 

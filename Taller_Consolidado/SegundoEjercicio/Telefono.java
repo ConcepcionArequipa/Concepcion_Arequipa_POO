@@ -1,13 +1,10 @@
-package EjercicioDos;
-
-import SegundoEjercicio.DatoInvalidoException;
-import SegundoEjercicio.Dispositivo;
+package SegundoEjercicio;
 
 public class Telefono extends Dispositivo {
     private String sistemaOperativo;
     private double almacenamiento;
 
-    public Telefono(String marca, String modelo, double precio,String sistemaOperativo, double almacenamiento) throws SegundoEjercicio.DatoInvalidoException {
+    public Telefono(String marca, String modelo, double precio,String sistemaOperativo, double almacenamiento) throws DatoInvalidoException{
         super(marca,modelo,precio);
         setSistemaOperativo(sistemaOperativo);
         setAlmacenamiento(almacenamiento);
@@ -17,9 +14,9 @@ public class Telefono extends Dispositivo {
         return sistemaOperativo;
     }
 
-    public void setSistemaOperativo(String sistemaOperativo) throws SegundoEjercicio.DatoInvalidoException {
+    public void setSistemaOperativo(String sistemaOperativo) throws DatoInvalidoException{
         if (sistemaOperativo == null || sistemaOperativo.trim().isEmpty()) {
-            throw new SegundoEjercicio.DatoInvalidoException("El sistema operativo no puede estar vacio");
+            throw new DatoInvalidoException("El sistema operativo no puede estar vacio");
         }
         this.sistemaOperativo = sistemaOperativo;
     }
@@ -28,7 +25,7 @@ public class Telefono extends Dispositivo {
         return almacenamiento;
     }
 
-    public void setAlmacenamiento(double almacenamiento) throws SegundoEjercicio.DatoInvalidoException {
+    public void setAlmacenamiento(double almacenamiento) throws DatoInvalidoException{
         if (almacenamiento <= 0) {
             throw new DatoInvalidoException("El almacenamiento no puede ser menor que 0");
         }
