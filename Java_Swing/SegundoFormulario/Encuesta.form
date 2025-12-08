@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="SegundoFormulario.Encuesta">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="14" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="607" height="468"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="8ad34" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Que tan comprometido estas con tus clases de aprendizaje a distancia?"/>
+        </properties>
+      </component>
+      <component id="a3eb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Cuantas horas pasas aprendiendo y haciendo tareas escolares diariamente?"/>
+        </properties>
+      </component>
+      <component id="cbd7b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16645630"/>
+          <text value="Encuesta sobre de las clases virtuales en la EPN"/>
+        </properties>
+      </component>
+      <component id="44ff5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Con que frecuencia interactuas con tus profesores a la semana?"/>
+        </properties>
+      </component>
+      <component id="46dc1" class="javax.swing.JRadioButton" binding="masDeDosVecesRadioButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Mas de dos veces"/>
+        </properties>
+      </component>
+      <component id="306c0" class="javax.swing.JRadioButton" binding="muyComprometidoRadioButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Muy comprometido"/>
+        </properties>
+      </component>
+      <component id="8c858" class="javax.swing.JRadioButton" binding="pocoComprometidoRadioButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Poco comprometido"/>
+        </properties>
+      </component>
+      <component id="9b023" class="javax.swing.JRadioButton" binding="nadaComprometidoRadioButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Nada comprometido"/>
+        </properties>
+      </component>
+      <component id="f5002" class="javax.swing.JRadioButton" binding="a1HoraRadioButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="1 hora"/>
+        </properties>
+      </component>
+      <component id="b9837" class="javax.swing.JRadioButton" binding="a2HorasRadioButton" default-binding="true">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="2 horas"/>
+        </properties>
+      </component>
+      <component id="62ba0" class="javax.swing.JRadioButton" binding="a3HorasOMasRadioButton" default-binding="true">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="3 horas o mas"/>
+        </properties>
+      </component>
+      <component id="ca565" class="javax.swing.JButton" binding="enviarRespuestasButton" default-binding="true">
+        <constraints>
+          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Enviar respuestas"/>
+        </properties>
+      </component>
+      <component id="594ce" class="javax.swing.JRadioButton" binding="dosVecesRadioButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Dos veces"/>
+        </properties>
+      </component>
+      <component id="5741e" class="javax.swing.JRadioButton" binding="unaVezRadioButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Una vez"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
