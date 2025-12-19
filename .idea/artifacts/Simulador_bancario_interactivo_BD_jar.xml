@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Simulador_bancario_interactivo_BD:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Simulador_bancario_interactivo_BD_jar</output-path>
+    <root id="archive" name="Simulador_bancario_interactivo_BD.jar">
+      <element id="module-output" name="Simulador_bancario_interactivo_BD" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/librerias/mysql-connector-j-9.5.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

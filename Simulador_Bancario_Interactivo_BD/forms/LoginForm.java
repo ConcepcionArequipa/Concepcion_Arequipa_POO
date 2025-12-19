@@ -14,6 +14,7 @@ public class LoginForm extends JFrame {
     private JPasswordField txtPassword;
     private int intentos= 0;
 
+
     //Metodo constructor, edicion de las herramientas del frame
     public LoginForm() {
         setTitle("Inicio de Sesion"); //Titulo para la pantalla
@@ -38,16 +39,24 @@ public class LoginForm extends JFrame {
                 }
                 try {
                     Connection conexion = ConexionBD.getConexion();
-                    String sql = "SELECT * FROM usuarios WHERE usuario=? AND password=? AND activo=true";
+                    String sql = "SELECT saldo, rol FROM usuarios WHERE usuario=? AND password=? AND activo=true";
                     PreparedStatement ps = conexion.prepareStatement(sql);
                     ps.setString(1, usuarioIngresado);
                     ps.setString(2, claveIngresada);
                     ResultSet rs = ps.executeQuery();
                     if (rs.next()) {
-                        double saldo = rs.getDouble("saldo");
+                        String rol = rs.getString("rol");
                         JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso!");
                         dispose(); //oculta la pantalla del login
-                        new BancoForm(usuarioIngresado, saldo);
+
+                        //Abre el panel de administrador
+                        if ("administrador".equalsIgnoreCase(rol)) {
+                            new AdminForm();
+                        }
+                        else{
+                            double saldo = rs.getDouble("saldo");
+                            new BancoForm(usuarioIngresado, saldo);
+                        }
 
                     }
                     else {
@@ -60,6 +69,8 @@ public class LoginForm extends JFrame {
                         }
 
                     }
+                    rs.close();
+                    ps.close();
                     conexion.close();
                 }
                 catch (Exception ex) {
@@ -71,5 +82,6 @@ public class LoginForm extends JFrame {
         });
         //Agregar un diseño mas lindo en cuanto a margenes
         loginPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 15, 20));
+
     }
 }

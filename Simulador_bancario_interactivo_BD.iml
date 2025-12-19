@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/librerias" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sql" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/exe" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

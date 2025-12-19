@@ -100,7 +100,7 @@ public class BancoForm extends JFrame {
                         }
                         //Validar que el saldo a retirar sea suficiente
                         if(valorRetiro > saldo){
-                            JOptionPane.showMessageDialog(null, "Saldo insuficiente\nTu saldo actual es: $" + saldo);
+                            JOptionPane.showMessageDialog(null, "Saldo insuficiente\nTu saldo actual es: $" + BancoForm.this.saldo);
 
 
                         }
@@ -193,6 +193,7 @@ public class BancoForm extends JFrame {
                                         // actualizar remitente y destinatario
 
                                         // Restar saldo al remitente ya hecho
+                                        BancoForm.this.saldo -= montoTranferir;
                                         String sqlRemitente = "UPDATE usuarios SET saldo=? WHERE usuario=?";
                                         PreparedStatement psRemitente = conexion.prepareStatement(sqlRemitente);
                                         psRemitente.setDouble(1, BancoForm.this.saldo);
@@ -207,7 +208,7 @@ public class BancoForm extends JFrame {
                                         psDestinatario.executeUpdate();
 
                                         conexion.commit();
-                                        BancoForm.this.saldo -= montoTranferir;
+
                                         lblSaldo.setText("$"+ BancoForm.this.saldo);
                                         JOptionPane.showMessageDialog(BancoForm.this,
                                                 "Transferencia exitosa a " + destinatario + " por $" + montoTranferir);
